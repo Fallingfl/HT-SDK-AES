@@ -16,15 +16,15 @@
 namespace SDK
 {
 
-// Function Weather_Effects_Interface.Weather_Effects_Interface_C.Reset Emitters
+// Function Weather_Effects_Interface.Weather_Effects_Interface_C.Editor Update
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void IWeather_Effects_Interface_C::Reset_Emitters()
+void IWeather_Effects_Interface_C::Editor_Update()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Weather_Effects_Interface_C", "Reset Emitters");
+		Func = AsUObject()->Class->GetFunction("Weather_Effects_Interface_C", "Editor Update");
 
 	AsUObject()->ProcessEvent(Func, nullptr);
 }
@@ -44,15 +44,15 @@ void IWeather_Effects_Interface_C::Force_Startup()
 }
 
 
-// Function Weather_Effects_Interface.Weather_Effects_Interface_C.Editor Update
+// Function Weather_Effects_Interface.Weather_Effects_Interface_C.Reset Emitters
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void IWeather_Effects_Interface_C::Editor_Update()
+void IWeather_Effects_Interface_C::Reset_Emitters()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Weather_Effects_Interface_C", "Editor Update");
+		Func = AsUObject()->Class->GetFunction("Weather_Effects_Interface_C", "Reset Emitters");
 
 	AsUObject()->ProcessEvent(Func, nullptr);
 }

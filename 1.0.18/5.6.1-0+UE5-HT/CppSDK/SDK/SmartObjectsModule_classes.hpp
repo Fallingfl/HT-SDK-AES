@@ -695,7 +695,7 @@ DUMPER7_ASSERTS_ASmartObjectTestingActor;
 
 // Class SmartObjectsModule.SmartObjectSlotValidationFilter
 // 0x0108 (0x0130 - 0x0028)
-class USmartObjectSlotValidationFilter : public UObject
+class USmartObjectSlotValidationFilter final : public UObject
 {
 public:
 	struct FSmartObjectSlotValidationParams       EntryParameters;                                   // 0x0028(0x0080)(Edit, Protected, NativeAccessSpecifierProtected)

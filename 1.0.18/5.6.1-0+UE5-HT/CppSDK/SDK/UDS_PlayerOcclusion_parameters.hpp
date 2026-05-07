@@ -17,6 +17,93 @@
 namespace SDK::Params
 {
 
+// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.ExecuteUbergraph_UDS_PlayerOcclusion
+// 0x0008 (0x0008 - 0x0000)
+struct UDS_PlayerOcclusion_C_ExecuteUbergraph_UDS_PlayerOcclusion final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_UDS_PlayerOcclusion_C_ExecuteUbergraph_UDS_PlayerOcclusion;
+
+// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Get Occlusion Location
+// 0x0028 (0x0028 - 0x0000)
+struct UDS_PlayerOcclusion_C_Get_Occlusion_Location final
+{
+public:
+	class APlayerCameraManager*                   CallFunc_GetPlayerCameraManager_ReturnValue;       // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetCameraLocation_ReturnValue;            // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_UDS_PlayerOcclusion_C_Get_Occlusion_Location;
+
+// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Get Starting Occlusion Profile
+// 0x0018 (0x0018 - 0x0000)
+struct UDS_PlayerOcclusion_C_Get_Starting_Occlusion_Profile final
+{
+public:
+	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x0000(0x0008)(NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           CallFunc_K2_SetTimerForNextTick_ReturnValue;       // 0x0008(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_VectorVector_ReturnValue;      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_K2_SetTimer_Time_ImplicitCast;            // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_UDS_PlayerOcclusion_C_Get_Starting_Occlusion_Profile;
+
+// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct UDS_PlayerOcclusion_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_UDS_PlayerOcclusion_C_ReceiveTick;
+
+// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Set Target Fully Occluded
+// 0x0010 (0x0010 - 0x0000)
+struct UDS_PlayerOcclusion_C_Set_Target_Fully_Occluded final
+{
+public:
+	TArray<double>                                K2Node_MakeArray_Array;                            // 0x0000(0x0010)(ReferenceParm)
+};
+DUMPER7_ASSERTS_UDS_PlayerOcclusion_C_Set_Target_Fully_Occluded;
+
+// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Set Target Fully Unoccluded
+// 0x0010 (0x0010 - 0x0000)
+struct UDS_PlayerOcclusion_C_Set_Target_Fully_Unoccluded final
+{
+public:
+	TArray<double>                                K2Node_MakeArray_Array;                            // 0x0000(0x0010)(ReferenceParm)
+};
+DUMPER7_ASSERTS_UDS_PlayerOcclusion_C_Set_Target_Fully_Unoccluded;
+
+// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Test Point for Occlusion
+// 0x0060 (0x0060 - 0x0000)
+struct UDS_PlayerOcclusion_C_Test_Point_for_Occlusion final
+{
+public:
+	TArray<class AActor*>                         Actors_to_Ignore;                                  // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FVector                                Test_Location;                                     // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<double>                                Occlusion_Profile;                                 // 0x0028(0x0010)(Parm, OutParm)
+	double                                        Overall_Occlusion;                                 // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Total_Occlusion;                                   // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<double>                                New_Occlusion_Profile;                             // 0x0048(0x0010)(Edit, BlueprintVisible)
+	int32                                         Total_Hits;                                        // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Directional_Hits;                                  // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_UDS_PlayerOcclusion_C_Test_Point_for_Occlusion;
+
+// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Update Current Occlusion Profile
+// 0x0008 (0x0008 - 0x0000)
+struct UDS_PlayerOcclusion_C_Update_Current_Occlusion_Profile final
+{
+public:
+	double                                        Interp_Speed_Multiplier;                           // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_UDS_PlayerOcclusion_C_Update_Current_Occlusion_Profile;
+
 // Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Update Target Occlusion Profile
 // 0x00D8 (0x00D8 - 0x0000)
 struct UDS_PlayerOcclusion_C_Update_Target_Occlusion_Profile final
@@ -64,93 +151,6 @@ public:
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_UDS_PlayerOcclusion_C_Update_Target_Occlusion_Profile;
-
-// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Update Current Occlusion Profile
-// 0x0008 (0x0008 - 0x0000)
-struct UDS_PlayerOcclusion_C_Update_Current_Occlusion_Profile final
-{
-public:
-	double                                        Interp_Speed_Multiplier;                           // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_UDS_PlayerOcclusion_C_Update_Current_Occlusion_Profile;
-
-// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Test Point for Occlusion
-// 0x0060 (0x0060 - 0x0000)
-struct UDS_PlayerOcclusion_C_Test_Point_for_Occlusion final
-{
-public:
-	TArray<class AActor*>                         Actors_to_Ignore;                                  // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FVector                                Test_Location;                                     // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<double>                                Occlusion_Profile;                                 // 0x0028(0x0010)(Parm, OutParm)
-	double                                        Overall_Occlusion;                                 // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Total_Occlusion;                                   // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<double>                                New_Occlusion_Profile;                             // 0x0048(0x0010)(Edit, BlueprintVisible)
-	int32                                         Total_Hits;                                        // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Directional_Hits;                                  // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_UDS_PlayerOcclusion_C_Test_Point_for_Occlusion;
-
-// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Set Target Fully Unoccluded
-// 0x0010 (0x0010 - 0x0000)
-struct UDS_PlayerOcclusion_C_Set_Target_Fully_Unoccluded final
-{
-public:
-	TArray<double>                                K2Node_MakeArray_Array;                            // 0x0000(0x0010)(ReferenceParm)
-};
-DUMPER7_ASSERTS_UDS_PlayerOcclusion_C_Set_Target_Fully_Unoccluded;
-
-// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Set Target Fully Occluded
-// 0x0010 (0x0010 - 0x0000)
-struct UDS_PlayerOcclusion_C_Set_Target_Fully_Occluded final
-{
-public:
-	TArray<double>                                K2Node_MakeArray_Array;                            // 0x0000(0x0010)(ReferenceParm)
-};
-DUMPER7_ASSERTS_UDS_PlayerOcclusion_C_Set_Target_Fully_Occluded;
-
-// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct UDS_PlayerOcclusion_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_UDS_PlayerOcclusion_C_ReceiveTick;
-
-// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Get Starting Occlusion Profile
-// 0x0018 (0x0018 - 0x0000)
-struct UDS_PlayerOcclusion_C_Get_Starting_Occlusion_Profile final
-{
-public:
-	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x0000(0x0008)(NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimerForNextTick_ReturnValue;       // 0x0008(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_VectorVector_ReturnValue;      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_K2_SetTimer_Time_ImplicitCast;            // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_UDS_PlayerOcclusion_C_Get_Starting_Occlusion_Profile;
-
-// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Get Occlusion Location
-// 0x0028 (0x0028 - 0x0000)
-struct UDS_PlayerOcclusion_C_Get_Occlusion_Location final
-{
-public:
-	class APlayerCameraManager*                   CallFunc_GetPlayerCameraManager_ReturnValue;       // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetCameraLocation_ReturnValue;            // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_UDS_PlayerOcclusion_C_Get_Occlusion_Location;
-
-// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.ExecuteUbergraph_UDS_PlayerOcclusion
-// 0x0008 (0x0008 - 0x0000)
-struct UDS_PlayerOcclusion_C_ExecuteUbergraph_UDS_PlayerOcclusion final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_UDS_PlayerOcclusion_C_ExecuteUbergraph_UDS_PlayerOcclusion;
 
 }
 

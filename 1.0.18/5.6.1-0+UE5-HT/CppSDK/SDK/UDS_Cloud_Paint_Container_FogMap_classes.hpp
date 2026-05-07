@@ -37,9 +37,9 @@ public:
 	class UTextureRenderTarget2D*                 BlendFogMapRenderTargetTarget;                     // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_UDS_Cloud_Paint_Container_FogMap(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 
 public:
 	static class UClass* StaticClass()

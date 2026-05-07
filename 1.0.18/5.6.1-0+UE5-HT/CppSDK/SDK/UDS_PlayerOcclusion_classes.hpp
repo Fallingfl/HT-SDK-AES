@@ -49,16 +49,16 @@ public:
 	EDrawDebugTrace                               Show_Trace_Debugs;                                 // 0x0163(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Update_Target_Occlusion_Profile();
-	void Update_Current_Occlusion_Profile();
-	void Test_Point_for_Occlusion(TArray<class AActor*>& Actors_to_Ignore, const struct FVector& Test_Location, TArray<double>* Occlusion_Profile, double* Overall_Occlusion);
-	void Set_Target_Fully_Unoccluded();
-	void Set_Target_Fully_Occluded();
-	void ReceiveTick(float DeltaSeconds);
-	void Initialize();
-	void Get_Starting_Occlusion_Profile();
-	void Get_Occlusion_Location();
 	void ExecuteUbergraph_UDS_PlayerOcclusion(int32 EntryPoint);
+	void Get_Occlusion_Location();
+	void Get_Starting_Occlusion_Profile();
+	void Initialize();
+	void ReceiveTick(float DeltaSeconds);
+	void Set_Target_Fully_Occluded();
+	void Set_Target_Fully_Unoccluded();
+	void Test_Point_for_Occlusion(TArray<class AActor*>& Actors_to_Ignore, const struct FVector& Test_Location, TArray<double>* Occlusion_Profile, double* Overall_Occlusion);
+	void Update_Current_Occlusion_Profile();
+	void Update_Target_Occlusion_Profile();
 
 public:
 	static class UClass* StaticClass()

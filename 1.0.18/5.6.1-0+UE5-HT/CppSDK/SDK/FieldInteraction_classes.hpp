@@ -204,7 +204,7 @@ DUMPER7_ASSERTS_UFieldInteractionBase;
 
 // Class FieldInteraction.FieldInteractionManager
 // 0x01E8 (0x04B0 - 0x02C8)
-class AFieldInteractionManager : public AActor
+class AFieldInteractionManager final : public AActor
 {
 public:
 	class UNiagaraComponent*                      SolverComponent;                                   // 0x02C8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

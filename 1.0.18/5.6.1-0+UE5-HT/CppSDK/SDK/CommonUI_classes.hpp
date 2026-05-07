@@ -1281,7 +1281,7 @@ DUMPER7_ASSERTS_UCommonTextStyle;
 
 // Class CommonUI.CommonTextScrollStyle
 // 0x0018 (0x0040 - 0x0028)
-class UCommonTextScrollStyle final : public UObject
+class UCommonTextScrollStyle : public UObject
 {
 public:
 	float                                         Speed;                                             // 0x0028(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

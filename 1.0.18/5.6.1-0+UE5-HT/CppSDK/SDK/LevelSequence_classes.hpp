@@ -347,7 +347,7 @@ DUMPER7_ASSERTS_ULevelSequenceBurnIn;
 
 // Class LevelSequence.LevelSequenceDirector
 // 0x0020 (0x0048 - 0x0028)
-class ULevelSequenceDirector : public UObject
+class ULevelSequenceDirector final : public UObject
 {
 public:
 	int32                                         SubSequenceID;                                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

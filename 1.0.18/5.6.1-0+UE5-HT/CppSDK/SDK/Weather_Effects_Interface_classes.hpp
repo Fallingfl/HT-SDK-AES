@@ -21,9 +21,9 @@ namespace SDK
 class IWeather_Effects_Interface_C final
 {
 public:
-	void Reset_Emitters();
-	void Force_Startup();
 	void Editor_Update();
+	void Force_Startup();
+	void Reset_Emitters();
 
 public:
 	static class UClass* StaticClass()

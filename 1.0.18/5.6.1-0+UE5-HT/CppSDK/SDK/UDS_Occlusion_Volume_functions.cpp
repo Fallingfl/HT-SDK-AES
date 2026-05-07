@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function UDS_Occlusion_Volume.UDS_Occlusion_Volume_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void AUDS_Occlusion_Volume_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_Occlusion_Volume_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function UDS_Occlusion_Volume.UDS_Occlusion_Volume_C.Get Occlusion Result
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -52,6 +38,20 @@ void AUDS_Occlusion_Volume_C::Get_Occlusion_Result(bool Weather, bool* Occluded)
 
 	if (Occluded != nullptr)
 		*Occluded = Parms.Occluded;
+}
+
+
+// Function UDS_Occlusion_Volume.UDS_Occlusion_Volume_C.UserConstructionScript
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AUDS_Occlusion_Volume_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UDS_Occlusion_Volume_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

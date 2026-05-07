@@ -17,6 +17,18 @@
 namespace SDK::Params
 {
 
+// Function UDS_Occlusion_Volume.UDS_Occlusion_Volume_C.Get Occlusion Result
+// 0x0004 (0x0004 - 0x0000)
+struct UDS_Occlusion_Volume_C_Get_Occlusion_Result final
+{
+public:
+	bool                                          Weather;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Occluded;                                          // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Select_Default;                             // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_UDS_Occlusion_Volume_C_Get_Occlusion_Result;
+
 // Function UDS_Occlusion_Volume.UDS_Occlusion_Volume_C.UserConstructionScript
 // 0x0190 (0x0190 - 0x0000)
 struct UDS_Occlusion_Volume_C_UserConstructionScript final
@@ -42,18 +54,6 @@ public:
 	float                                         CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast; // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_UDS_Occlusion_Volume_C_UserConstructionScript;
-
-// Function UDS_Occlusion_Volume.UDS_Occlusion_Volume_C.Get Occlusion Result
-// 0x0004 (0x0004 - 0x0000)
-struct UDS_Occlusion_Volume_C_Get_Occlusion_Result final
-{
-public:
-	bool                                          Weather;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Occluded;                                          // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Select_Default;                             // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_UDS_Occlusion_Volume_C_Get_Occlusion_Result;
 
 }
 

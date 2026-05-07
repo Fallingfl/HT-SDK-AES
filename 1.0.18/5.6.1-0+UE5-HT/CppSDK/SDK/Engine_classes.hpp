@@ -28881,7 +28881,7 @@ DUMPER7_ASSERTS_UMaterialParameterCollection;
 
 // Class Engine.AnimNotifyState_DisableRootMotion
 // 0x0000 (0x0030 - 0x0030)
-class UAnimNotifyState_DisableRootMotion : public UAnimNotifyState
+class UAnimNotifyState_DisableRootMotion final : public UAnimNotifyState
 {
 public:
 	static class UClass* StaticClass()

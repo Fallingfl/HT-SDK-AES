@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function Close_Thunder_Audio_Player.Close_Thunder_Audio_Player_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UClose_Thunder_Audio_Player_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Close_Thunder_Audio_Player_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function Close_Thunder_Audio_Player.Close_Thunder_Audio_Player_C.ExecuteUbergraph_Close_Thunder_Audio_Player
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UClose_Thunder_Audio_Player_C::ExecuteUbergraph_Close_Thunder_Audio_Player(
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Close_Thunder_Audio_Player.Close_Thunder_Audio_Player_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UClose_Thunder_Audio_Player_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Close_Thunder_Audio_Player_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

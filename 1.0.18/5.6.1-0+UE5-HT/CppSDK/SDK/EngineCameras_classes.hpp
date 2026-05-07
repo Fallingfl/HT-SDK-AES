@@ -21,7 +21,7 @@ namespace SDK
 
 // Class EngineCameras.LegacyCameraShake
 // 0x0110 (0x01F0 - 0x00E0)
-class ULegacyCameraShake : public UCameraShakeBase
+class ULegacyCameraShake final : public UCameraShakeBase
 {
 public:
 	float                                         OscillationDuration;                               // 0x00D8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

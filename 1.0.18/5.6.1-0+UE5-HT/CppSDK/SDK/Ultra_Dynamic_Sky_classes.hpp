@@ -11,23 +11,23 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UDS_FeatureToggle_structs.hpp"
-#include "UDS_SkyMode_structs.hpp"
-#include "HTGame_structs.hpp"
-#include "HTGame_classes.hpp"
-#include "UDS_FogColorMode_structs.hpp"
-#include "UDS_Space_Planet_structs.hpp"
-#include "UDS_ColorMode_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "UDS_SkyLightMode_structs.hpp"
-#include "UDS_Project_Mode_structs.hpp"
-#include "UDS_LensFlareType_structs.hpp"
 #include "UDS_NoiseType_structs.hpp"
+#include "UDS_FeatureToggle_structs.hpp"
+#include "UDS_SkyLightMode_structs.hpp"
+#include "UDS_SkyMode_structs.hpp"
+#include "UDS_Project_Mode_structs.hpp"
+#include "UDS_ColorMode_structs.hpp"
 #include "UDS_VolRT_Mode_structs.hpp"
+#include "UDS_LensFlareType_structs.hpp"
+#include "UDS_Occlusion_Mode_structs.hpp"
 #include "UDS_CityPresets_structs.hpp"
 #include "UDS_PropertyType_structs.hpp"
-#include "UDS_Occlusion_Mode_structs.hpp"
+#include "UDS_FogColorMode_structs.hpp"
 #include "UDS_Post_Process_Stage_structs.hpp"
+#include "UDS_Space_Planet_structs.hpp"
+#include "HTGame_structs.hpp"
+#include "HTGame_classes.hpp"
 
 
 namespace SDK
@@ -670,12 +670,12 @@ public:
 	TArray<struct FCloudLightTimeOfDay>           CloudLights;                                       // 0x2A50(0x0010)(Edit, BlueprintVisible)
 
 public:
-	void World_Space_to_Drawn_Target_Pixel_Space(const struct FVector2D& In, struct FVector2D* Out);
-	void Update_Painted_Cloud_Coverage_Target();
-	void Notify_of_Removed_Cloud_Paint_Container();
-	void ExecuteUbergraph_Ultra_Dynamic_Sky(int32 EntryPoint);
-	void EditorTick();
 	void Cloud_Coverage_Target_Mapping(struct FVector* Mapping);
+	void EditorTick();
+	void ExecuteUbergraph_Ultra_Dynamic_Sky(int32 EntryPoint);
+	void Notify_of_Removed_Cloud_Paint_Container();
+	void Update_Painted_Cloud_Coverage_Target();
+	void World_Space_to_Drawn_Target_Pixel_Space(const struct FVector2D& In, struct FVector2D* Out);
 
 public:
 	static class UClass* StaticClass()

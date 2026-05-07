@@ -16,15 +16,6 @@
 namespace SDK::Params
 {
 
-// Function UDS_Cloud_Paint_Container.UDS_Cloud_Paint_Container_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct UDS_Cloud_Paint_Container_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_UDS_Cloud_Paint_Container_C_ReceiveEndPlay;
-
 // Function UDS_Cloud_Paint_Container.UDS_Cloud_Paint_Container_C.ExecuteUbergraph_UDS_Cloud_Paint_Container
 // 0x0040 (0x0040 - 0x0000)
 struct UDS_Cloud_Paint_Container_C_ExecuteUbergraph_UDS_Cloud_Paint_Container final
@@ -43,6 +34,15 @@ public:
 	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_UDS_Cloud_Paint_Container_C_ExecuteUbergraph_UDS_Cloud_Paint_Container;
+
+// Function UDS_Cloud_Paint_Container.UDS_Cloud_Paint_Container_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct UDS_Cloud_Paint_Container_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_UDS_Cloud_Paint_Container_C_ReceiveEndPlay;
 
 }
 

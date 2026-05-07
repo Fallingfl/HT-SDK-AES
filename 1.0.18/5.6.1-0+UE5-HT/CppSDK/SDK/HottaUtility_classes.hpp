@@ -21,7 +21,7 @@ namespace SDK
 
 // Class HottaUtility.EditorEventActor
 // 0x0000 (0x02C8 - 0x02C8)
-class AEditorEventActor : public AActor
+class AEditorEventActor final : public AActor
 {
 public:
 	void WhenFeatureLevelChanged();

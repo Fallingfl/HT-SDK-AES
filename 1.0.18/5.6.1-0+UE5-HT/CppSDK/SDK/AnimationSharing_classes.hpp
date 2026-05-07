@@ -47,7 +47,7 @@ DUMPER7_ASSERTS_UAnimationSharingStateProcessor;
 
 // Class AnimationSharing.AnimSharingStateInstance
 // 0x0020 (0x0410 - 0x03F0)
-class UAnimSharingStateInstance : public UAnimInstance
+class UAnimSharingStateInstance final : public UAnimInstance
 {
 public:
 	class UAnimSequence*                          AnimationToPlay;                                   // 0x03E8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
@@ -79,7 +79,7 @@ DUMPER7_ASSERTS_UAnimSharingStateInstance;
 
 // Class AnimationSharing.AnimSharingTransitionInstance
 // 0x0010 (0x0400 - 0x03F0)
-class UAnimSharingTransitionInstance : public UAnimInstance
+class UAnimSharingTransitionInstance final : public UAnimInstance
 {
 public:
 	TWeakObjectPtr<class USkeletalMeshComponent>  FromComponent;                                     // 0x03E8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -106,7 +106,7 @@ DUMPER7_ASSERTS_UAnimSharingTransitionInstance;
 
 // Class AnimationSharing.AnimSharingAdditiveInstance
 // 0x0010 (0x0400 - 0x03F0)
-class UAnimSharingAdditiveInstance : public UAnimInstance
+class UAnimSharingAdditiveInstance final : public UAnimInstance
 {
 public:
 	TWeakObjectPtr<class USkeletalMeshComponent>  BaseComponent;                                     // 0x03E8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)

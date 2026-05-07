@@ -31,8 +31,8 @@ public:
 	class AActor*                                 UDW;                                               // 0x0288(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_Close_Thunder_Audio_Player(int32 EntryPoint);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

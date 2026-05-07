@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "UDS_DLWE_Mode_structs.hpp"
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "UDS_Occlusion_Mode_structs.hpp"
 #include "UDS_TemperatureType_structs.hpp"
 #include "UDS_Weather_Display_Names_structs.hpp"
-#include "UDS_PropertyType_structs.hpp"
-#include "UDS_DLWE_Mode_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "UDS_Occlusion_Mode_structs.hpp"
 #include "UDS_SeasonMode_structs.hpp"
+#include "UDS_PropertyType_structs.hpp"
 #include "UDS_and_UDW_State_structs.hpp"
 #include "UDS_Project_Mode_structs.hpp"
 #include "HTGame_classes.hpp"
@@ -267,7 +267,7 @@ public:
 	TArray<class ALandscape*>                     Landscape_Actors;                                  // 0x2468(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	struct FVector                                DLWE_Recenter_Offset;                              // 0x2478(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         DLWE_Frame_Count;                                  // 0x2490(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	UDS_DLWE_Mode::EUDS_DLWE_Mode                 Current_DLWE_Mode;                                 // 0x2494(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EUDS_DLWE_Mode                                Current_DLWE_Mode;                                 // 0x2494(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2495[0x3];                                     // 0x2495(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector2D>                      Cloud_Reference_Array;                             // 0x2498(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<class UTextureRenderTarget2D*>         Render_Targets_to_Release_Next_Frame;              // 0x24A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
@@ -450,7 +450,7 @@ public:
 	struct FVector                                Cached_Rain_Velocity;                              // 0x2C18(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Last_Recenter_Check_Location;                      // 0x2C30(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Current_Local_Weather_Change_Speed;                // 0x2C48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(UDS_DLWE_Mode::EUDS_DLWE_Mode Current_Mode, const struct FVector& Render_Target_Center, const struct FVector& Mapping_Space)> Update_DLWE_State; // 0x2C50(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(EUDS_DLWE_Mode Current_Mode, const struct FVector& Render_Target_Center, const struct FVector& Mapping_Space)> Update_DLWE_State; // 0x2C50(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class USoundMix*                              Outdoor_Sound_Mix_Modifier;                        // 0x2C60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	double                                        Max_Attenuation_for_UDS_Outdoor_Sound;             // 0x2C68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	double                                        Update_Season_Interval;                            // 0x2C70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)

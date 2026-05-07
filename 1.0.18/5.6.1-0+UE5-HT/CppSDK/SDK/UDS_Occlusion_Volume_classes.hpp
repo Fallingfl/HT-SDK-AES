@@ -37,8 +37,8 @@ public:
 	float                                         Capsule_Half_Height;                               // 0x0308(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void UserConstructionScript();
 	void Get_Occlusion_Result(bool Weather, bool* Occluded);
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

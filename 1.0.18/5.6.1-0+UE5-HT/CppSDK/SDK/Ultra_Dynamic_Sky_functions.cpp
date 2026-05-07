@@ -17,53 +17,36 @@
 namespace SDK
 {
 
-// Function Ultra_Dynamic_Sky.Ultra_Dynamic_Sky_C.World Space to Drawn Target Pixel Space
+// Function Ultra_Dynamic_Sky.Ultra_Dynamic_Sky_C.Cloud Coverage Target Mapping
 // (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// const struct FVector2D&                 In                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector2D*                       Out                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         Mapping                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AUltra_Dynamic_Sky_C::World_Space_to_Drawn_Target_Pixel_Space(const struct FVector2D& In, struct FVector2D* Out)
+void AUltra_Dynamic_Sky_C::Cloud_Coverage_Target_Mapping(struct FVector* Mapping)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Ultra_Dynamic_Sky_C", "World Space to Drawn Target Pixel Space");
+		Func = Class->GetFunction("Ultra_Dynamic_Sky_C", "Cloud Coverage Target Mapping");
 
-	Params::Ultra_Dynamic_Sky_C_World_Space_to_Drawn_Target_Pixel_Space Parms{};
-
-	Parms.In = std::move(In);
+	Params::Ultra_Dynamic_Sky_C_Cloud_Coverage_Target_Mapping Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Out != nullptr)
-		*Out = std::move(Parms.Out);
+	if (Mapping != nullptr)
+		*Mapping = std::move(Parms.Mapping);
 }
 
 
-// Function Ultra_Dynamic_Sky.Ultra_Dynamic_Sky_C.Update Painted Cloud Coverage Target
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Ultra_Dynamic_Sky.Ultra_Dynamic_Sky_C.EditorTick
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void AUltra_Dynamic_Sky_C::Update_Painted_Cloud_Coverage_Target()
+void AUltra_Dynamic_Sky_C::EditorTick()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Ultra_Dynamic_Sky_C", "Update Painted Cloud Coverage Target");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Ultra_Dynamic_Sky.Ultra_Dynamic_Sky_C.Notify of Removed Cloud Paint Container
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void AUltra_Dynamic_Sky_C::Notify_of_Removed_Cloud_Paint_Container()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Ultra_Dynamic_Sky_C", "Notify of Removed Cloud Paint Container");
+		Func = Class->GetFunction("Ultra_Dynamic_Sky_C", "EditorTick");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -89,38 +72,55 @@ void AUltra_Dynamic_Sky_C::ExecuteUbergraph_Ultra_Dynamic_Sky(int32 EntryPoint)
 }
 
 
-// Function Ultra_Dynamic_Sky.Ultra_Dynamic_Sky_C.EditorTick
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function Ultra_Dynamic_Sky.Ultra_Dynamic_Sky_C.Notify of Removed Cloud Paint Container
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void AUltra_Dynamic_Sky_C::EditorTick()
+void AUltra_Dynamic_Sky_C::Notify_of_Removed_Cloud_Paint_Container()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Ultra_Dynamic_Sky_C", "EditorTick");
+		Func = Class->GetFunction("Ultra_Dynamic_Sky_C", "Notify of Removed Cloud Paint Container");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Ultra_Dynamic_Sky.Ultra_Dynamic_Sky_C.Cloud Coverage Target Mapping
-// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// struct FVector*                         Mapping                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Ultra_Dynamic_Sky.Ultra_Dynamic_Sky_C.Update Painted Cloud Coverage Target
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void AUltra_Dynamic_Sky_C::Cloud_Coverage_Target_Mapping(struct FVector* Mapping)
+void AUltra_Dynamic_Sky_C::Update_Painted_Cloud_Coverage_Target()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Ultra_Dynamic_Sky_C", "Cloud Coverage Target Mapping");
+		Func = Class->GetFunction("Ultra_Dynamic_Sky_C", "Update Painted Cloud Coverage Target");
 
-	Params::Ultra_Dynamic_Sky_C_Cloud_Coverage_Target_Mapping Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Ultra_Dynamic_Sky.Ultra_Dynamic_Sky_C.World Space to Drawn Target Pixel Space
+// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const struct FVector2D&                 In                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector2D*                       Out                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AUltra_Dynamic_Sky_C::World_Space_to_Drawn_Target_Pixel_Space(const struct FVector2D& In, struct FVector2D* Out)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Ultra_Dynamic_Sky_C", "World Space to Drawn Target Pixel Space");
+
+	Params::Ultra_Dynamic_Sky_C_World_Space_to_Drawn_Target_Pixel_Space Parms{};
+
+	Parms.In = std::move(In);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Mapping != nullptr)
-		*Mapping = std::move(Parms.Mapping);
+	if (Out != nullptr)
+		*Out = std::move(Parms.Out);
 }
 
 }

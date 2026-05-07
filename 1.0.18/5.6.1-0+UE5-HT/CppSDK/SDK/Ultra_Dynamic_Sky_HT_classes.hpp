@@ -11,24 +11,24 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UDS_FeatureToggle_structs.hpp"
-#include "UDS_Space_Parent_structs.hpp"
-#include "UDS_SkyMode_structs.hpp"
-#include "UDS_Project_Mode_structs.hpp"
-#include "E_CloudTypes_structs.hpp"
-#include "HTGame_structs.hpp"
-#include "HTGame_classes.hpp"
-#include "UDS_FogColorMode_structs.hpp"
-#include "UDS_Space_Planet_structs.hpp"
-#include "UDS_ColorMode_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "UDS_SkyLightMode_structs.hpp"
-#include "UDS_LensFlareType_structs.hpp"
 #include "UDS_NoiseType_structs.hpp"
+#include "E_CloudTypes_structs.hpp"
+#include "UDS_FeatureToggle_structs.hpp"
+#include "UDS_SkyLightMode_structs.hpp"
+#include "UDS_SkyMode_structs.hpp"
+#include "UDS_ColorMode_structs.hpp"
+#include "UDS_Project_Mode_structs.hpp"
 #include "UDS_VolRT_Mode_structs.hpp"
+#include "UDS_LensFlareType_structs.hpp"
+#include "UDS_Occlusion_Mode_structs.hpp"
 #include "UDS_CityPresets_structs.hpp"
 #include "UDS_PropertyType_structs.hpp"
-#include "UDS_Occlusion_Mode_structs.hpp"
+#include "UDS_FogColorMode_structs.hpp"
+#include "UDS_Space_Planet_structs.hpp"
+#include "HTGame_structs.hpp"
+#include "HTGame_classes.hpp"
+#include "UDS_Space_Parent_structs.hpp"
 
 
 namespace SDK
@@ -643,199 +643,199 @@ public:
 	int32                                         Max_Tick_Set_HT;                                   // 0x7D2C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void World_Space_to_Drawn_Target_Pixel_Space(const struct FVector2D& In, struct FVector2D* Out);
-	struct FVector VolumetricCloudTextureVelocity();
-	void Volumetric_Clouds_SubNoise_Scales(struct FLinearColor* High, struct FLinearColor* Low);
-	void Volumetric_Clouds_Parent_Materials(TSoftObjectPtr<class UMaterialInterface>* Simplified, TSoftObjectPtr<class UMaterialInterface>* Complex);
-	void Volumetric_Clouds_Base_Clouds_Texture(TSoftObjectPtr<class UTexture2D>* Tex);
-	void Volumetric_Cloud_Shadows_Altitude(double* Cloud_Shadows_Altitude);
-	void Volumetric_Cloud_Layer_Scale(double* Layer_Scale);
-	void Volumetric_Cloud_Layer_Height_Ex(double Base_Cloud_Height, double* Layer_Height);
-	void Volumetric_Cloud_Floor_VariationEx(double* Height_Clear, double* Height_Cloudy, double* Color);
-	bool Using_2D_Clouds();
-	void UserConstructionScript();
-	bool Use_Sky_Atmosphere();
-	void Update_Volumetric_Cloud_Light_Rays_Movement();
-	void Update_Variables_Controlled_By_Weather();
-	void Update_Static_Variables();
-	void Update_Sky_Atmosphere_Location(const struct FVector& Location);
-	void Update_Settings_Based_on_Platform_and_Scalability();
-	void Update_Replicated_Time();
-	void Update_Painted_Fog_Map_Coverage_Target();
-	void Update_Painted_Cloud_Coverage_Target();
-	void Update_Overcast_Turbulence();
-	void Update_from_UDW_Construction_Script();
-	void Update_Distance_to_Sample_Max_Count(bool Shut_Down);
-	void Update_Directional_Light_Rotations();
-	void Update_Current_Volumetric_Clouds_MID();
-	void Update_Cloud_Coverage_After_Painting();
-	void Update_Active_Variables();
-	void Unfiltered_Moon_Light_Intensity(double* Out);
-	void Twilight_Brightness_Falloff(double Z, double* Scale);
-	void Transition_Sky_Light_Intensity(double New_Sky_Light_Intensity_Multiplier, double Transition_Time);
-	double Total_Time_Elapsed();
-	void TimeOfDayInterv(double DeltaTime);
-	void TimeOfDayAnimationPC(double DeltaTime);
-	void Timed_Override_with_New_Changes();
-	double Time_of_Day_Offset(double DeltaTime);
-	void Tick_Time_Transition();
-	void Test_Point_for_Painted_Cloud_Coverage(const struct FVector& Location, double* Cloud_Coverage_with_Painting);
-	void Swap_with_Cinematic_Runtime_Value(double In, double Cine, bool User_Higher, double* Out);
-	void Sun_Z_Vector(struct FVector* Out);
-	void Sun_Shadows_MIDs(TArray<class UMaterialInstanceDynamic*>* Out);
-	void Starting_Cloud_Formation();
-	void Start_Async_Loader();
-	void Space_Planet_Parent_MID(const struct FUDS_Space_Planet& Planet_0, TSoftObjectPtr<class UMaterialInterface>* Out);
-	void Solar_Eclipse_Circle_Mask(double Sun_Angular_Radius, double Moon_Angular_Radius, const struct FVector& Moon_Vector, double Moon_Softness, double* Fraction_Showing);
-	double Sky_MID_Cloud_Density();
-	void Size_Cache_Arrays();
-	void Set_Up_Volumetric_Cloud_Light_Rays();
-	void Set_Up_Overcast_Turbulence();
-	void Set_Up_Lens_Flare();
-	void Set_Time_of_Day_using_Time_Code(const struct FTimecode& Time_Code);
-	void Set_Sun_and_Moon_Root_Rotation();
-	void Set_Date_and_Time(const struct FDateTime& Date_Time);
-	void Set_Cloud_Timing();
-	void Scale_Sample_Count(double In, double* Out);
-	void Restart_Real_Time_Sky_Light_Capture();
-	void Restart_Inside_Cloud_Fog();
-	void Release_Async_Loaded_Object(TSoftObjectPtr<class UObject> Object);
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void ReceiveBeginPlay();
-	void Query_Project_Settings_And_UDS_Version();
-	void Overcast_Luminance_Boost(double Multiplier, double* Out);
-	double Overcast_Brightness();
-	void OnRep_Replicated_Time_of_Day();
-	void OnLoaded_5F14813C46035060E42AB39E3DBF617B(class UObject* Loaded);
-	void Notify_of_Removed_Cloud_Paint_Container();
-	double Night_Filter();
-	void Moon_Z_Vector(struct FVector* Out);
-	double Moon_Phase_Multiplier(double* Without_Light_Brightness);
-	double Moon_Light_Volumetric_Scattering_Intensity();
-	void Monitor_for_Changes();
-	void Load_Required_Assets();
-	void Lens_Flare_Parent_Material(TSoftObjectPtr<class UMaterialInterface>* Mat);
-	void IsVolumeTimeOfDayEnable(bool* Enable, double* TimeOfDay_0);
-	void IsRainEx(bool* rain);
-	void IsCartoonSkyMode(bool* NewParam);
-	void Is_Sun_Light_Casting_Shadows(bool* Yes);
-	void Is_Moon_Light_Casting_Shadows(bool* Yes);
-	void Is_Location_Inside_Cloud_Layer(const struct FVector& Location, bool* Inside);
-	void Is_Lens_Flare_EnabledEx(bool* Yes);
-	void Initialize_Occlusion();
-	void initData();
-	void InitComponets(bool* NewParam);
-	void InitComp(bool* NewParam);
-	void InitCarToonSky(class UMaterialInstanceDynamic** NewParam);
-	void Increment_Day();
-	void HasEditorActor(bool* Has);
-	void MS_to_Time_of_Day(int32 Hours, int32 Minutes, int32 Seconds, int32 Miliseconds, double* Time);
-	void GetVolumetricStart_Distance(double* Start_Distance);
-	void GetVolumetricFogExtinctionScale(double* ExtinctionScale_0);
-	void GetRealSunVerticalOffset(double* SunInclination_0);
-	void GetRealSunRadius_(double* SunRadius_);
-	void GetRealSunLightIntensity(double* SunLightIntensity_0);
-	void GetRealSunLightColor(struct FLinearColor* SunLightColor_0);
-	void GetRealSunInclination(double* SunInclination_0);
-	void GetRealSunAngle(double* SunAngle_0);
-	void GetCurrentVolumetricFogStartDistance(double* _Volumetric_Fog_Start_Distance);
-	void GetCurrentVolumetricFogExtinctionScale(double* _Volumetric_Fog_Extinction_Scale);
-	void GetCurrentTimeOfDayMotion(double* TimeOfDay_0, double* TimeOfDayEffect);
-	void GetCurrentScaleTotalFogDensity(double* _ScaleTotalFogDensity);
-	void GetCurrentFogStartDistancewhenClear(double* _FogStartDistancewhenClear);
-	void GetCurrentFoggyHeightFogFalloff(double* _FoggyHeightFogFalloffalloff);
-	void GetCurrentFoggyDensityContribution(double* _Foggy_Density_Contribution);
-	void GetCurrentFogDensitywhereStartDistanceReachesZero(double* _FogDensitywhereStartDistanceReachesZero);
-	void GetCurrentFogDensityNighttimeMultiplier(double* _FogDensityNighttimeMultiplier);
-	void GetCurrentFogDensityDaytimeMutliplier(double* _FogDensityDaytimeMutliplier);
-	void GetCurrentDustyHeightFogFalloff(double* _DustyHeightFogFalloff);
-	void GetCurrentDustDensityContribution(double* _DustDensityContribution);
-	void GetCurrentDisableHeight_FogAboveVolumetricCloud_Layer(bool* _DisableHeightFogAboveVolumetricCloudLayer);
-	void GetCurrentDFAOMinOcclusion(double* DFAOMinOcclusion_0);
-	void GetCurrentDFAOExponent(double* DFAOExponent_0);
-	void GetCurrentCloudyHeightFogFalloff(double* _CloudyHeightFogFalloff);
-	void GetCurrentCloudyDensityContribution(double* _Cloudy_Density_Contribution);
-	void GetCurrentBaseHeightFogFalloff(double* _BaseHeightFogFalloff);
-	void GetCurrentBaseFogDensity(double* _BaseFogDensity);
-	void Get_Time_of_Day_in_Real_Time_Format(struct FTimecode* Time);
-	TSoftObjectPtr<class UMaterialInterface> Get_Sky_MID_Parent_Material_Instance();
-	void Get_Real_SunVolumetricScatteringIntensity(double* SunVolumetricScatteringIntensity_0);
-	void Get_Real_SunSoftness(double* SunSoftness_0);
-	void Get_Real_SunDiskIntensity(double* SunDiskIntensity_0);
-	void Get_Real_ExtendDawnandDusk(double* ExtendDawnandDuskensity);
-	void Get_Nearby_Cloud_Cells_To_Load_Asynchronously();
-	void Get_CurrentSaturation(double* Saturation_0);
-	void Get_CurrentOvercastBrightnessNight(double* _OvercastBrightnessNight);
-	void Get_CurrentContrast(double* Contrast_0);
-	void Get_Current_OvercastBrightnessDay(double* _OvercastBrightnessDay);
-	void Get_Current_Fog_Color_Intensity_Scale_Volume(double* _FogColorIntensityScale);
-	void Get_Current_Fog(double* Fog_0);
-	void Get_Current_Date_and_Time(struct FDateTime* Current_Date_and_Time);
-	void Get_Current_Cloud_Shadows_Intensity_and_Softness(double* Intensity, double* Softness);
-	void Get_Current_Cloud_Coverage(double* CloudCoverage_0);
-	void Get_Camera_Location_and_Camera_Relative_Heights();
-	void Force_Valid_Day();
-	void Force_Startup();
-	void Flat_Cloudiness(bool* On);
-	void Fire_Editor_Dispatchers();
-	void Finish_Time_Transition();
-	void Sunrise_Times();
-	void Filtered_Moon_Light_Intensity(double Unfiltered, double* Intensity);
-	void ExecuteUbergraph_Ultra_Dynamic_Sky_HT(int32 EntryPoint);
-	void EditorTick();
-	void Directional_Inscattering_Multiplier(double* Multiplier);
-	bool Dimming_Directional_Lights();
-	void Days_Since_J2000(int32 Input_Year, int32 Day_of_Year, int32* Days);
-	void DayNightCycle();
-	void Day_Ended();
-	void Current_Volumetric_Clouds_Density(double* Layer1, bool* Cloud_Layer_Visible, double* Layer2);
-	double Current_Volumetric_Cloud_Sky_Atmo_Contribution();
-	void Current_Volumetric_Cloud_Multiscattering_Intensity(double* Out);
-	double Current_Volumetric_Cloud_Macro_Variation();
-	void Current_Volumetric_Cloud_Inner_Emit_Limit(double* Out);
-	void Current_View_Sample_Scale(double* Out);
-	double Current_Sunset_Event_Time();
-	double Current_Sunrise_Event_Time();
-	double Current_Sun_Radius();
-	double Current_Sun_Disk_Intensity();
-	struct FLinearColor Current_Sky_Atmosphere_Luminance();
-	void Current_Sky_Atmosphere_Absorption_Color(struct FLinearColor* Out);
-	double Current_Overcast_Swirl();
-	double Current_Moons_Cloud_Mask();
-	void Current_Moon_Scale_and_Cutout_Value(double* Scale, double* Cutout);
-	double Current_Mie_Anisotropy();
-	void Current_Lerp_to_Simplified_Clouds(double* Alpha);
-	double Current_Base_Clouds_Scale();
-	void Current_Applied_Cloud_Top_and_Bottom(double* Bottom, double* Top);
-	struct FLinearColor Current_2D_Cloud_Tint();
-	void Create_UDS_and_UDW_State_for_Saving(struct FUDS_and_UDW_State* Packaged_State);
-	void Convert_Time_of_Day_to_Time_Code(double Time, struct FTimecode* Timecode);
-	void Control_UDW_Weather_State();
-	void Construction_Script_Function(bool Run_By_Counterpart, bool Move_Static_Lights);
-	void Construct_Space_Layer();
-	double Clouds_Time_of_Day_Factor();
-	void Cloud_Wisp_Gradient_Vector(struct FLinearColor* Out);
-	struct FVector Cloud_Texture_Velocity();
-	void Cloud_Shadows_Parent_Material(TSoftObjectPtr<class UMaterialInterface>* Mat);
-	void Cloud_Shadows_Light_Vector_Process(const struct FVector& Vector, struct FLinearColor* Out);
-	double Cloud_Shadows_Cloud_Density();
-	double Cloud_Darkening();
-	void Cloud_Coverage_Target_Mapping(struct FVector* Mapping);
-	void Check_To_Use_Existing_MIDs();
-	void Check_For_Daylight_Savings_Time();
-	void Check_for_Cloud_Coverage_Target_Recenter();
-	void Change_Sky_Mode_at_Runtime(EUDS_SkyMode New_Sky_Mode);
-	void Cache_Sun_and_Moon_Orientation();
-	void Both_Cloud_Shadows_MIDs(TArray<class UMaterialInstanceDynamic*>* Out);
-	void Approximate_Real_Sun_Moon_and_Stars(int32 Month_0, int32 Day_0, int32 Year_0, double Time_of_Day, double Time_Zone_0, bool Only_Calculate_Sun, struct FVector* Sun_Vector, struct FVector* Moon_Vector, double* Real_Phase, struct FVector* Phase_Alignment, double* Celestial_Orbit, struct FLinearColor* Celestial_Yaw);
-	void Apply_Volumetric_Mode(EUDS_VolRT_Mode Mode);
-	void Apply_Location_Preset(EUDS_CityPresets Location);
-	void Apply_Console_Variable_with_Check(const class FString& Cvar, double Setting, int32 Type);
-	void All_Volumetric_Cloud_MIDs(bool Shadows, TArray<class UMaterialInstanceDynamic*>* MIDs);
-	void Add_Object_to_Async_Loading_Queue(TSoftObjectPtr<class UObject> Object, bool High_Priority);
-	double Absent_Directional_Lights_Brightness();
 	void TwoD_Clouds_Base_Texture(TSoftObjectPtr<class UTexture2D>* Tex);
+	double Absent_Directional_Lights_Brightness();
+	void Add_Object_to_Async_Loading_Queue(TSoftObjectPtr<class UObject> Object, bool High_Priority);
+	void All_Volumetric_Cloud_MIDs(bool Shadows, TArray<class UMaterialInstanceDynamic*>* MIDs);
+	void Apply_Console_Variable_with_Check(const class FString& Cvar, double Setting, int32 Type);
+	void Apply_Location_Preset(EUDS_CityPresets Location);
+	void Apply_Volumetric_Mode(EUDS_VolRT_Mode Mode);
+	void Approximate_Real_Sun_Moon_and_Stars(int32 Month_0, int32 Day_0, int32 Year_0, double Time_of_Day, double Time_Zone_0, bool Only_Calculate_Sun, struct FVector* Sun_Vector, struct FVector* Moon_Vector, double* Real_Phase, struct FVector* Phase_Alignment, double* Celestial_Orbit, struct FLinearColor* Celestial_Yaw);
+	void Both_Cloud_Shadows_MIDs(TArray<class UMaterialInstanceDynamic*>* Out);
+	void Cache_Sun_and_Moon_Orientation();
+	void Change_Sky_Mode_at_Runtime(EUDS_SkyMode New_Sky_Mode);
+	void Check_for_Cloud_Coverage_Target_Recenter();
+	void Check_For_Daylight_Savings_Time();
+	void Check_To_Use_Existing_MIDs();
+	void Cloud_Coverage_Target_Mapping(struct FVector* Mapping);
+	double Cloud_Darkening();
+	double Cloud_Shadows_Cloud_Density();
+	void Cloud_Shadows_Light_Vector_Process(const struct FVector& Vector, struct FLinearColor* Out);
+	void Cloud_Shadows_Parent_Material(TSoftObjectPtr<class UMaterialInterface>* Mat);
+	struct FVector Cloud_Texture_Velocity();
+	void Cloud_Wisp_Gradient_Vector(struct FLinearColor* Out);
+	double Clouds_Time_of_Day_Factor();
+	void Construct_Space_Layer();
+	void Construction_Script_Function(bool Run_By_Counterpart, bool Move_Static_Lights);
+	void Control_UDW_Weather_State();
+	void Convert_Time_of_Day_to_Time_Code(double Time, struct FTimecode* Timecode);
+	void Create_UDS_and_UDW_State_for_Saving(struct FUDS_and_UDW_State* Packaged_State);
+	struct FLinearColor Current_2D_Cloud_Tint();
+	void Current_Applied_Cloud_Top_and_Bottom(double* Bottom, double* Top);
+	double Current_Base_Clouds_Scale();
+	void Current_Lerp_to_Simplified_Clouds(double* Alpha);
+	double Current_Mie_Anisotropy();
+	void Current_Moon_Scale_and_Cutout_Value(double* Scale, double* Cutout);
+	double Current_Moons_Cloud_Mask();
+	double Current_Overcast_Swirl();
+	void Current_Sky_Atmosphere_Absorption_Color(struct FLinearColor* Out);
+	struct FLinearColor Current_Sky_Atmosphere_Luminance();
+	double Current_Sun_Disk_Intensity();
+	double Current_Sun_Radius();
+	double Current_Sunrise_Event_Time();
+	double Current_Sunset_Event_Time();
+	void Current_View_Sample_Scale(double* Out);
+	void Current_Volumetric_Cloud_Inner_Emit_Limit(double* Out);
+	double Current_Volumetric_Cloud_Macro_Variation();
+	void Current_Volumetric_Cloud_Multiscattering_Intensity(double* Out);
+	double Current_Volumetric_Cloud_Sky_Atmo_Contribution();
+	void Current_Volumetric_Clouds_Density(double* Layer1, bool* Cloud_Layer_Visible, double* Layer2);
+	void Day_Ended();
+	void DayNightCycle();
+	void Days_Since_J2000(int32 Input_Year, int32 Day_of_Year, int32* Days);
+	bool Dimming_Directional_Lights();
+	void Directional_Inscattering_Multiplier(double* Multiplier);
+	void EditorTick();
+	void ExecuteUbergraph_Ultra_Dynamic_Sky_HT(int32 EntryPoint);
+	void Filtered_Moon_Light_Intensity(double Unfiltered, double* Intensity);
+	void Sunrise_Times();
+	void Finish_Time_Transition();
+	void Fire_Editor_Dispatchers();
+	void Flat_Cloudiness(bool* On);
+	void Force_Startup();
+	void Force_Valid_Day();
+	void Get_Camera_Location_and_Camera_Relative_Heights();
+	void Get_Current_Cloud_Coverage(double* CloudCoverage_0);
+	void Get_Current_Cloud_Shadows_Intensity_and_Softness(double* Intensity, double* Softness);
+	void Get_Current_Date_and_Time(struct FDateTime* Current_Date_and_Time);
+	void Get_Current_Fog(double* Fog_0);
+	void Get_Current_Fog_Color_Intensity_Scale_Volume(double* _FogColorIntensityScale);
+	void Get_Current_OvercastBrightnessDay(double* _OvercastBrightnessDay);
+	void Get_CurrentContrast(double* Contrast_0);
+	void Get_CurrentOvercastBrightnessNight(double* _OvercastBrightnessNight);
+	void Get_CurrentSaturation(double* Saturation_0);
+	void Get_Nearby_Cloud_Cells_To_Load_Asynchronously();
+	void Get_Real_ExtendDawnandDusk(double* ExtendDawnandDuskensity);
+	void Get_Real_SunDiskIntensity(double* SunDiskIntensity_0);
+	void Get_Real_SunSoftness(double* SunSoftness_0);
+	void Get_Real_SunVolumetricScatteringIntensity(double* SunVolumetricScatteringIntensity_0);
+	TSoftObjectPtr<class UMaterialInterface> Get_Sky_MID_Parent_Material_Instance();
+	void Get_Time_of_Day_in_Real_Time_Format(struct FTimecode* Time);
+	void GetCurrentBaseFogDensity(double* _BaseFogDensity);
+	void GetCurrentBaseHeightFogFalloff(double* _BaseHeightFogFalloff);
+	void GetCurrentCloudyDensityContribution(double* _Cloudy_Density_Contribution);
+	void GetCurrentCloudyHeightFogFalloff(double* _CloudyHeightFogFalloff);
+	void GetCurrentDFAOExponent(double* DFAOExponent_0);
+	void GetCurrentDFAOMinOcclusion(double* DFAOMinOcclusion_0);
+	void GetCurrentDisableHeight_FogAboveVolumetricCloud_Layer(bool* _DisableHeightFogAboveVolumetricCloudLayer);
+	void GetCurrentDustDensityContribution(double* _DustDensityContribution);
+	void GetCurrentDustyHeightFogFalloff(double* _DustyHeightFogFalloff);
+	void GetCurrentFogDensityDaytimeMutliplier(double* _FogDensityDaytimeMutliplier);
+	void GetCurrentFogDensityNighttimeMultiplier(double* _FogDensityNighttimeMultiplier);
+	void GetCurrentFogDensitywhereStartDistanceReachesZero(double* _FogDensitywhereStartDistanceReachesZero);
+	void GetCurrentFoggyDensityContribution(double* _Foggy_Density_Contribution);
+	void GetCurrentFoggyHeightFogFalloff(double* _FoggyHeightFogFalloffalloff);
+	void GetCurrentFogStartDistancewhenClear(double* _FogStartDistancewhenClear);
+	void GetCurrentScaleTotalFogDensity(double* _ScaleTotalFogDensity);
+	void GetCurrentTimeOfDayMotion(double* TimeOfDay_0, double* TimeOfDayEffect);
+	void GetCurrentVolumetricFogExtinctionScale(double* _Volumetric_Fog_Extinction_Scale);
+	void GetCurrentVolumetricFogStartDistance(double* _Volumetric_Fog_Start_Distance);
+	void GetRealSunAngle(double* SunAngle_0);
+	void GetRealSunInclination(double* SunInclination_0);
+	void GetRealSunLightColor(struct FLinearColor* SunLightColor_0);
+	void GetRealSunLightIntensity(double* SunLightIntensity_0);
+	void GetRealSunRadius_(double* SunRadius_);
+	void GetRealSunVerticalOffset(double* SunInclination_0);
+	void GetVolumetricFogExtinctionScale(double* ExtinctionScale_0);
+	void GetVolumetricStart_Distance(double* Start_Distance);
+	void MS_to_Time_of_Day(int32 Hours, int32 Minutes, int32 Seconds, int32 Miliseconds, double* Time);
+	void HasEditorActor(bool* Has);
+	void Increment_Day();
+	void InitCarToonSky(class UMaterialInstanceDynamic** NewParam);
+	void InitComp(bool* NewParam);
+	void InitComponets(bool* NewParam);
+	void initData();
+	void Initialize_Occlusion();
+	void Is_Lens_Flare_EnabledEx(bool* Yes);
+	void Is_Location_Inside_Cloud_Layer(const struct FVector& Location, bool* Inside);
+	void Is_Moon_Light_Casting_Shadows(bool* Yes);
+	void Is_Sun_Light_Casting_Shadows(bool* Yes);
+	void IsCartoonSkyMode(bool* NewParam);
+	void IsRainEx(bool* rain);
+	void IsVolumeTimeOfDayEnable(bool* Enable, double* TimeOfDay_0);
+	void Lens_Flare_Parent_Material(TSoftObjectPtr<class UMaterialInterface>* Mat);
+	void Load_Required_Assets();
+	void Monitor_for_Changes();
+	double Moon_Light_Volumetric_Scattering_Intensity();
+	double Moon_Phase_Multiplier(double* Without_Light_Brightness);
+	void Moon_Z_Vector(struct FVector* Out);
+	double Night_Filter();
+	void Notify_of_Removed_Cloud_Paint_Container();
+	void OnLoaded_5F14813C46035060E42AB39E3DBF617B(class UObject* Loaded);
+	void OnRep_Replicated_Time_of_Day();
+	double Overcast_Brightness();
+	void Overcast_Luminance_Boost(double Multiplier, double* Out);
+	void Query_Project_Settings_And_UDS_Version();
+	void ReceiveBeginPlay();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void ReceiveTick(float DeltaSeconds);
+	void Release_Async_Loaded_Object(TSoftObjectPtr<class UObject> Object);
+	void Restart_Inside_Cloud_Fog();
+	void Restart_Real_Time_Sky_Light_Capture();
+	void Scale_Sample_Count(double In, double* Out);
+	void Set_Cloud_Timing();
+	void Set_Date_and_Time(const struct FDateTime& Date_Time);
+	void Set_Sun_and_Moon_Root_Rotation();
+	void Set_Time_of_Day_using_Time_Code(const struct FTimecode& Time_Code);
+	void Set_Up_Lens_Flare();
+	void Set_Up_Overcast_Turbulence();
+	void Set_Up_Volumetric_Cloud_Light_Rays();
+	void Size_Cache_Arrays();
+	double Sky_MID_Cloud_Density();
+	void Solar_Eclipse_Circle_Mask(double Sun_Angular_Radius, double Moon_Angular_Radius, const struct FVector& Moon_Vector, double Moon_Softness, double* Fraction_Showing);
+	void Space_Planet_Parent_MID(const struct FUDS_Space_Planet& Planet_0, TSoftObjectPtr<class UMaterialInterface>* Out);
+	void Start_Async_Loader();
+	void Starting_Cloud_Formation();
+	void Sun_Shadows_MIDs(TArray<class UMaterialInstanceDynamic*>* Out);
+	void Sun_Z_Vector(struct FVector* Out);
+	void Swap_with_Cinematic_Runtime_Value(double In, double Cine, bool User_Higher, double* Out);
+	void Test_Point_for_Painted_Cloud_Coverage(const struct FVector& Location, double* Cloud_Coverage_with_Painting);
+	void Tick_Time_Transition();
+	double Time_of_Day_Offset(double DeltaTime);
+	void Timed_Override_with_New_Changes();
+	void TimeOfDayAnimationPC(double DeltaTime);
+	void TimeOfDayInterv(double DeltaTime);
+	double Total_Time_Elapsed();
+	void Transition_Sky_Light_Intensity(double New_Sky_Light_Intensity_Multiplier, double Transition_Time);
+	void Twilight_Brightness_Falloff(double Z, double* Scale);
+	void Unfiltered_Moon_Light_Intensity(double* Out);
+	void Update_Active_Variables();
+	void Update_Cloud_Coverage_After_Painting();
+	void Update_Current_Volumetric_Clouds_MID();
+	void Update_Directional_Light_Rotations();
+	void Update_Distance_to_Sample_Max_Count(bool Shut_Down);
+	void Update_from_UDW_Construction_Script();
+	void Update_Overcast_Turbulence();
+	void Update_Painted_Cloud_Coverage_Target();
+	void Update_Painted_Fog_Map_Coverage_Target();
+	void Update_Replicated_Time();
+	void Update_Settings_Based_on_Platform_and_Scalability();
+	void Update_Sky_Atmosphere_Location(const struct FVector& Location);
+	void Update_Static_Variables();
+	void Update_Variables_Controlled_By_Weather();
+	void Update_Volumetric_Cloud_Light_Rays_Movement();
+	bool Use_Sky_Atmosphere();
+	void UserConstructionScript();
+	bool Using_2D_Clouds();
+	void Volumetric_Cloud_Floor_VariationEx(double* Height_Clear, double* Height_Cloudy, double* Color);
+	void Volumetric_Cloud_Layer_Height_Ex(double Base_Cloud_Height, double* Layer_Height);
+	void Volumetric_Cloud_Layer_Scale(double* Layer_Scale);
+	void Volumetric_Cloud_Shadows_Altitude(double* Cloud_Shadows_Altitude);
+	void Volumetric_Clouds_Base_Clouds_Texture(TSoftObjectPtr<class UTexture2D>* Tex);
+	void Volumetric_Clouds_Parent_Materials(TSoftObjectPtr<class UMaterialInterface>* Simplified, TSoftObjectPtr<class UMaterialInterface>* Complex);
+	void Volumetric_Clouds_SubNoise_Scales(struct FLinearColor* High, struct FLinearColor* Low);
+	struct FVector VolumetricCloudTextureVelocity();
+	void World_Space_to_Drawn_Target_Pixel_Space(const struct FVector2D& In, struct FVector2D* Out);
 
 public:
 	static class UClass* StaticClass()

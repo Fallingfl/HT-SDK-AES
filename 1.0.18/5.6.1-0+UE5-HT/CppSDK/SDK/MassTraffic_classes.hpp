@@ -1204,7 +1204,7 @@ DUMPER7_ASSERTS_UMassTrafficParkingSpacesDataAsset;
 
 // Class MassTraffic.MassTrafficParkedVehicleSpawnDataGenerator
 // 0x0060 (0x0090 - 0x0030)
-class UMassTrafficParkedVehicleSpawnDataGenerator : public UMassEntitySpawnDataGeneratorBase
+class UMassTrafficParkedVehicleSpawnDataGenerator final : public UMassEntitySpawnDataGeneratorBase
 {
 public:
 	TMap<TSoftObjectPtr<class UMassEntityConfigAsset>, class FName> EntityTypeToParkingSpaceType;    // 0x0030(0x0050)(Edit, NativeAccessSpecifierPublic)

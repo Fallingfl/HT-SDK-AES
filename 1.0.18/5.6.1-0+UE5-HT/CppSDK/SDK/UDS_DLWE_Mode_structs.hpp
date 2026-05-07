@@ -16,7 +16,7 @@ namespace SDK
 
 // UserDefinedEnum UDS_DLWE_Mode.UDS_DLWE_Mode
 // NumValues: 0x0004
-enum class UDS_DLWE_Mode::EUDS_DLWE_Mode : uint8
+enum class EUDS_DLWE_Mode : uint8
 {
 	NewEnumerator0                           = 0,
 	NewEnumerator1                           = 1,

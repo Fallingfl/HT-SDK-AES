@@ -17,29 +17,111 @@
 namespace SDK
 {
 
-// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Update Target Occlusion Profile
-// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.ExecuteUbergraph_UDS_PlayerOcclusion
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUDS_PlayerOcclusion_C::Update_Target_Occlusion_Profile()
+void UUDS_PlayerOcclusion_C::ExecuteUbergraph_UDS_PlayerOcclusion(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_PlayerOcclusion_C", "Update Target Occlusion Profile");
+		Func = Class->GetFunction("UDS_PlayerOcclusion_C", "ExecuteUbergraph_UDS_PlayerOcclusion");
+
+	Params::UDS_PlayerOcclusion_C_ExecuteUbergraph_UDS_PlayerOcclusion Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Get Occlusion Location
+// (Protected, BlueprintCallable, BlueprintEvent)
+
+void UUDS_PlayerOcclusion_C::Get_Occlusion_Location()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UDS_PlayerOcclusion_C", "Get Occlusion Location");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Update Current Occlusion Profile
-// (Protected, BlueprintCallable, BlueprintEvent)
+// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Get Starting Occlusion Profile
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UUDS_PlayerOcclusion_C::Update_Current_Occlusion_Profile()
+void UUDS_PlayerOcclusion_C::Get_Starting_Occlusion_Profile()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_PlayerOcclusion_C", "Update Current Occlusion Profile");
+		Func = Class->GetFunction("UDS_PlayerOcclusion_C", "Get Starting Occlusion Profile");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Initialize
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UUDS_PlayerOcclusion_C::Initialize()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UDS_PlayerOcclusion_C", "Initialize");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUDS_PlayerOcclusion_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UDS_PlayerOcclusion_C", "ReceiveTick");
+
+	Params::UDS_PlayerOcclusion_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Set Target Fully Occluded
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UUDS_PlayerOcclusion_C::Set_Target_Fully_Occluded()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UDS_PlayerOcclusion_C", "Set Target Fully Occluded");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Set Target Fully Unoccluded
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UUDS_PlayerOcclusion_C::Set_Target_Fully_Unoccluded()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UDS_PlayerOcclusion_C", "Set Target Fully Unoccluded");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -77,113 +159,31 @@ void UUDS_PlayerOcclusion_C::Test_Point_for_Occlusion(TArray<class AActor*>& Act
 }
 
 
-// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Set Target Fully Unoccluded
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UUDS_PlayerOcclusion_C::Set_Target_Fully_Unoccluded()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_PlayerOcclusion_C", "Set Target Fully Unoccluded");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Set Target Fully Occluded
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UUDS_PlayerOcclusion_C::Set_Target_Fully_Occluded()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_PlayerOcclusion_C", "Set Target Fully Occluded");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UUDS_PlayerOcclusion_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_PlayerOcclusion_C", "ReceiveTick");
-
-	Params::UDS_PlayerOcclusion_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Initialize
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UUDS_PlayerOcclusion_C::Initialize()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_PlayerOcclusion_C", "Initialize");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Get Starting Occlusion Profile
-// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UUDS_PlayerOcclusion_C::Get_Starting_Occlusion_Profile()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_PlayerOcclusion_C", "Get Starting Occlusion Profile");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Get Occlusion Location
+// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Update Current Occlusion Profile
 // (Protected, BlueprintCallable, BlueprintEvent)
 
-void UUDS_PlayerOcclusion_C::Get_Occlusion_Location()
+void UUDS_PlayerOcclusion_C::Update_Current_Occlusion_Profile()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_PlayerOcclusion_C", "Get Occlusion Location");
+		Func = Class->GetFunction("UDS_PlayerOcclusion_C", "Update Current Occlusion Profile");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.ExecuteUbergraph_UDS_PlayerOcclusion
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function UDS_PlayerOcclusion.UDS_PlayerOcclusion_C.Update Target Occlusion Profile
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UUDS_PlayerOcclusion_C::ExecuteUbergraph_UDS_PlayerOcclusion(int32 EntryPoint)
+void UUDS_PlayerOcclusion_C::Update_Target_Occlusion_Profile()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_PlayerOcclusion_C", "ExecuteUbergraph_UDS_PlayerOcclusion");
+		Func = Class->GetFunction("UDS_PlayerOcclusion_C", "Update Target Occlusion Profile");
 
-	Params::UDS_PlayerOcclusion_C_ExecuteUbergraph_UDS_PlayerOcclusion Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

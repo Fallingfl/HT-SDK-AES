@@ -18,7 +18,7 @@ namespace SDK
 
 // Class FluidFlux.FluidFluxActor
 // 0x0000 (0x02C8 - 0x02C8)
-class AFluidFluxActor : public AActor
+class AFluidFluxActor final : public AActor
 {
 public:
 	bool IsES3_1();

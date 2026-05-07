@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "UDS_DLWE_Mode_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "HTGame_classes.hpp"
-#include "UDS_DLWE_Mode_structs.hpp"
 
 
 namespace SDK
@@ -49,19 +49,19 @@ public:
 	bool                                          OpenDebug;                                         // 0x0419(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UserConstructionScript();
-	void Update_Capture();
-	void Test_Point_Occlusion(const struct FVector& Location, UDS_DLWE_Mode::EUDS_DLWE_Mode Mode, bool* In_Volume, double* Occlusion);
-	void ResetBox();
-	void Recycle_Render_Target();
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void ReceiveBeginPlay();
-	void GetBoxBottomHeight(double* BottomHeight_0);
-	void Force_Update();
-	void ExecuteUbergraph_Weather_Mask_Projection_Box(int32 EntryPoint);
-	void ConstructionInit();
-	void BndEvt__Weather_Mask_Projection_Box_Box_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 	void BndEvt__Weather_Mask_Projection_Box_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void BndEvt__Weather_Mask_Projection_Box_Box_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	void ConstructionInit();
+	void ExecuteUbergraph_Weather_Mask_Projection_Box(int32 EntryPoint);
+	void Force_Update();
+	void GetBoxBottomHeight(double* BottomHeight_0);
+	void ReceiveBeginPlay();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void Recycle_Render_Target();
+	void ResetBox();
+	void Test_Point_Occlusion(const struct FVector& Location, EUDS_DLWE_Mode Mode, bool* In_Volume, double* Occlusion);
+	void Update_Capture();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

@@ -17623,7 +17623,7 @@ DUMPER7_ASSERTS_FAnimBlueprintDebugData;
 
 // ScriptStruct Engine.AnimBlueprintMutableData
 // 0x0001 (0x0001 - 0x0000)
-struct FAnimBlueprintMutableData
+struct FAnimBlueprintMutableData final
 {
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
